@@ -1,4 +1,4 @@
-package br.com.descomplica.documentacao.demo.entity;
+package br.com.descomplica.documentacao.entity;
 
 import java.util.List;
 

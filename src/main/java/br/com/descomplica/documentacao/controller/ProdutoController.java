@@ -1,7 +1,8 @@
-package br.com.descomplica.documentacao.demo.controller;
+package br.com.descomplica.documentacao.controller;
 
 import java.util.List;
 
+import br.com.descomplica.documentacao.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,14 +15,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.descomplica.documentacao.demo.entity.Produto;
-import br.com.descomplica.documentacao.demo.service.ProdutoService;
+import br.com.descomplica.documentacao.entity.Produto;
 
 @RestController
 @RequestMapping("/produto")
 public class ProdutoController {
 	@Autowired
-	ProdutoService produtoService;
+    ProdutoService produtoService;
 	
 	@GetMapping
 	public ResponseEntity<List<Produto>> getAll(){

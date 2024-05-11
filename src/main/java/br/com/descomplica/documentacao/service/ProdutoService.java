@@ -1,17 +1,17 @@
-package br.com.descomplica.documentacao.demo.service;
+package br.com.descomplica.documentacao.service;
 
 import java.util.List;
 
+import br.com.descomplica.documentacao.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.descomplica.documentacao.demo.entity.Produto;
-import br.com.descomplica.documentacao.demo.repository.ProdutoRepository;
+import br.com.descomplica.documentacao.entity.Produto;
 
 @Service
 public class ProdutoService {
 	@Autowired
-	ProdutoRepository produtoRepository;
+    ProdutoRepository produtoRepository;
 	
 	public List<Produto> getAll(){
 		return produtoRepository.findAll();

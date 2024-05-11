@@ -1,4 +1,4 @@
-package br.com.descomplica.documentacao.demo;
+package br.com.descomplica.documentacao;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

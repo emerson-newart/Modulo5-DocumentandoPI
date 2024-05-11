@@ -1,4 +1,4 @@
-package br.com.descomplica.documentacao.demo;
+package br.com.descomplica.documentacao;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

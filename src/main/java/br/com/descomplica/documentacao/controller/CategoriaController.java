@@ -1,7 +1,10 @@
-package br.com.descomplica.documentacao.demo.controller;
+package br.com.descomplica.documentacao.controller;
 
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.descomplica.documentacao.demo.entity.Categoria;
-import br.com.descomplica.documentacao.demo.service.CategoriaService;
+import br.com.descomplica.documentacao.entity.Categoria;
+import br.com.descomplica.documentacao.service.CategoriaService;
 
 @RestController
 @RequestMapping("/categoria")
@@ -24,6 +27,12 @@ public class CategoriaController {
 	CategoriaService categoriaService;
 	
 	@GetMapping
+	@Operation(summary="Listar todas as categorias", description  = "Listagem de Categorias")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "A requisição foi executada com sucesso."),
+			@ApiResponse(responseCode = "400", description = "Requisição Inválida"),
+			@ApiResponse(responseCode = "403", description = "Você não tem permissão para acessar esse recurso."),
+			@ApiResponse(responseCode = "404", description = "Recurso não encontrado.")})
 	public ResponseEntity<List<Categoria>> getAll(){
 		List<Categoria> categorias = categoriaService.getAll();
 		if(!categorias.isEmpty())

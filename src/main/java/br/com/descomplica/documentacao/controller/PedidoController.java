@@ -1,4 +1,4 @@
-package br.com.descomplica.documentacao.demo.controller;
+package br.com.descomplica.documentacao.controller;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.descomplica.documentacao.demo.entity.Pedido;
-import br.com.descomplica.documentacao.demo.service.PedidoService;
+import br.com.descomplica.documentacao.entity.Pedido;
+import br.com.descomplica.documentacao.service.PedidoService;
 
 @RestController
 @RequestMapping("/pedido")
