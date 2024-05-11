@@ -1,13 +1,13 @@
-package br.com.descomplica.documentacao.documentacao;
+package br.com.descomplica.documentacao.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DocumentacaoApplication {
+public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DocumentacaoApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }

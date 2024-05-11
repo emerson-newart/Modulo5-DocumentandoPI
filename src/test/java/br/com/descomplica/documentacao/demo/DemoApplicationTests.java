@@ -1,10 +1,10 @@
-package br.com.descomplica.documentacao.documentacao;
+package br.com.descomplica.documentacao.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DocumentacaoApplicationTests {
+class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
